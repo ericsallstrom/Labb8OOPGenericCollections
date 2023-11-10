@@ -14,11 +14,11 @@ namespace Labb8OOPGenericCollections
             Stack<Employee> stackOfEmployees = new();
 
             // Instansierar fem olika Employee-objekt, med olika värden för id, name, firstMaleInList och salary.
-            Employee emp1 = new(id: 101, name: "Aretha Franklin", gender: Genders.Female, salary: 35000);
-            Employee emp2 = new(id: 102, name: "David Bowie", gender: Genders.Male, salary: 35000);
-            Employee emp3 = new(id: 103, name: "Demi Lovato", gender: Genders.Nonbinary, salary: 25000);
-            Employee emp4 = new(id: 104, name: "Prince", gender: Genders.Male, salary: 30000);
-            Employee emp5 = new(id: 105, name: "Dorit Chrysler", gender: Genders.Female, salary: 20000);
+            Employee emp1 = new(id: 101, name: "Aretha Franklin", gender: Gender.Female, salary: 35000);
+            Employee emp2 = new(id: 102, name: "David Bowie", gender: Gender.Male, salary: 35000);
+            Employee emp3 = new(id: 103, name: "Demi Lovato", gender: Gender.Nonbinary, salary: 25000);
+            Employee emp4 = new(id: 104, name: "Prince", gender: Gender.Male, salary: 30000);
+            Employee emp5 = new(id: 105, name: "Dorit Chrysler", gender: Gender.Female, salary: 20000);
 
             // Lägger till objekten i Stacken med hjälp av Push()-metoden.
             stackOfEmployees.Push(emp1);
@@ -133,7 +133,7 @@ namespace Labb8OOPGenericCollections
 
             // Använder Find()-metoden för att hitta och tilldela variabeln 
             // firstMaleEmp det första objektet i listan som är av typen Male.
-            var firstMaleEmp = listOfEmployees.Find(emp => emp.Gender == Genders.Male);
+            var firstMaleEmp = listOfEmployees.Find(emp => emp.Gender == Gender.Male);
 
             // Informationen för det första objektet i listan
             // som är av typen Male skrivs ut till konsolen.
@@ -142,7 +142,7 @@ namespace Labb8OOPGenericCollections
 
             // Använder FindAll()-metoden för att hitta och lagra 
             // alla objekt som är av typen Male i listan allMaleEmp.
-            var allMaleEmp = listOfEmployees.FindAll(emp => emp.Gender == Genders.Male);
+            var allMaleEmp = listOfEmployees.FindAll(emp => emp.Gender == Gender.Male);
 
             // Använder en foreach-loop för att hitta och skriva ut information
             // för alla objekt som är av typen Male till konsolen.

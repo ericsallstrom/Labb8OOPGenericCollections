@@ -7,12 +7,12 @@ namespace Labb8OOPGenericCollections
         // Publika egenskaper som där värdet går att hämta men ej ändra.
         public uint Id { get; private set; }
         public string Name { get; private set; }
-        public Genders Gender { get; private set; }
+        public Gender Gender { get; private set; }
         public decimal Salary { get; private set; }
 
         // Konstruktor som tilldelar värdet av varje variabel från respektive 
         // objekt som instansieras av Employee-klassen till motsvarande egenskap.
-        public Employee(uint id, string name, Genders gender, decimal salary)
+        public Employee(uint id, string name, Gender gender, decimal salary)
         {
             Id = id;
             Name = name;
